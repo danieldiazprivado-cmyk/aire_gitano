@@ -193,12 +193,15 @@ img {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    /* Changed from height to min-height to prevent clipping */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    padding-top: 80px;
+    /* Added padding to clear the fixed navbar */
 }
 
 .hero-video-container {
