@@ -374,7 +374,7 @@ img {
 
 /* Services Section */
 .services-bg {
-    background-color: #0f0f0f;
+    background-color: #000;
 }
 
 .services-grid {
@@ -419,19 +419,22 @@ img {
 }
 
 .service-card {
-    background: #fff;
+    background: #111;
+    /* Dark background for cards */
     border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    /* Softer shadow */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    /* Darker shadow */
     transition: var(--transition);
     overflow: hidden;
-    /* Ensure image doesn't bleed out */
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    /* Subtle gold border */
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+    /* Gold glow on hover */
+    border-color: var(--primary-color);
 }
 
 .card-image {
@@ -462,11 +465,13 @@ img {
 .service-card h3 {
     margin-bottom: 15px;
     font-size: 1.5rem;
-    color: #000;
+    color: #fff;
+    /* White title */
 }
 
 .service-card p {
-    color: var(--text-muted);
+    color: #d0d0d0;
+    /* Off-white text */
     font-size: 0.95rem;
     line-height: 1.6;
 }
