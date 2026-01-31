@@ -48,12 +48,8 @@
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-video-container">
-            <video class="hero-video-iframe" autoplay loop muted playsinline poster="img/fire-bg-poster.jpg">
-                <source src="img/fire-main.mp4" type="video/mp4">
-                <!-- Fallback image if video fails -->
-                <img src="https://images.unsplash.com/photo-1493606622359-994c50257917?q=80&w=2660&auto=format&fit=crop"
-                    alt="Fuego Flamenco">
-            </video>
+            <!-- Static Image Background for Hero -->
+            <img src="img/aire-gitano-portada.jpg" alt="Aire Gitano Flamenco" class="hero-bg-img">
         </div>
         <div class="hero-content container">
             <h1 class="hero-title fade-in-up">
@@ -63,17 +59,16 @@
             <p class="hero-subtitle fade-in-up delay-1">No dejes que tus invitados se aburran. Regálales la pasión, la
                 fuerza y la magia exclusiva del Flamenco en Vivo que recordarán por años.</p>
             <div class="hero-buttons fade-in-up delay-2">
-                <a href="#contacto" class="btn btn-primary">Verificar Disponibilidad 2026</a>
-                <a href="#experiencia" class="btn btn-outline">Descubrir El Secreto</a>
+                <a href="#contacto" class="btn btn-primary">VERIFICAR DISPONIBILIDAD 2026</a>
             </div>
 
             <!-- Embedded Video -->
             <div class="hero-video-embed-wrapper fade-in-up delay-2">
                 <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/Vq7kmtKXu4c?si=Rj3q35q5z5x5x5x5&rel=0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    src="https://www.youtube.com/embed/xcJq9K7VdBI?rel=0&modestbranding=1&bg=000000"
+                    title="Aire Gitano Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
         <div class="scroll-down">
@@ -194,7 +189,13 @@
 
     <!-- Contact / CTA Section -->
     <section id="contacto" class="section contact-section">
-        <div class="container">
+        <div class="contact-overlay"></div>
+        <div class="contact-video-container">
+            <video class="contact-bg-video" autoplay loop muted playsinline poster="img/fire-bg-poster.jpg">
+                <source src="img/fire-main.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="contact-box glass-effect">
                 <div class="contact-content">
                     <h2 class="section-title">Reserva tu Fecha</h2>
