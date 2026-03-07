@@ -49,31 +49,61 @@
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-video-container">
-            <!-- Static Image Background for Hero -->
-            <img src="img/hero-bg-luxury.png?v=1" alt="Aire Gitano Flamenco Luxury" class="hero-bg-img">
+            <video class="hero-bg-video" autoplay loop muted playsinline poster="img/fire-bg-poster.jpg"
+                style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);">
+                <source src="img/fire-main.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="hero-content container">
             <h1 class="hero-title fade-in-up">
-                Un espectáculo de flamenco que hará tu boda<br>
-                <span class="gold-text">inolvidable</span>
+                Transforma tu boda en un espectáculo <span class="gold-text">inolvidable de flamenco</span>
             </h1>
-            <p class="hero-subtitle fade-in-up delay-1">Música en vivo, baile flamenco y una puesta en escena llena de
-                pasión que sorprenderá a todos tus invitados.</p>
+            <p class="hero-subtitle fade-in-up delay-1">Bailaores profesionales, guitarra en vivo y emoción
+                auténtica<br>para crear el momento más mágico de tu celebración.</p>
             <div class="hero-buttons fade-in-up delay-2">
-                <a href="#contacto" class="btn btn-primary">Consultar disponibilidad para mi boda</a>
-                <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
-            </div>
-
-            <!-- Embedded Video -->
-            <div class="hero-video-embed-wrapper fade-in-up delay-2">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Vq7kmtKXu4c?rel=0&modestbranding=1"
-                    title="Aire Gitano Video" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <a href="https://wa.me/573007796971?text=Hola,%20quiero%20reservar%20fecha%20para%20un%20show%20de%20flamenco%20en%20mi%20boda"
+                    target="_blank" class="btn btn-primary"
+                    style="background-color: #25d366; color: white; border-color: #25d366; font-size: 1.1rem; padding: 15px 40px; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Reservar fecha por WhatsApp
+                </a>
+                <a href="#experiencia" class="btn btn-outline" style="font-size: 1.1rem; padding: 15px 40px;">Ver videos
+                    del show</a>
             </div>
         </div>
+
         <div class="scroll-down">
             <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Bullets de Impacto -->
+    <section class="impact-bullets"
+        style="background-color: #111; padding: 30px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-fire gold-text" style="font-size: 1.5rem;"></i>
+                    <span style="font-size: 1.1rem; font-weight: 500;">Espectáculo profesional en vivo</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-shoe-prints gold-text" style="font-size: 1.5rem;"></i>
+                    <span style="font-size: 1.1rem; font-weight: 500;">Bailaores que electrizan a tus invitados</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-guitar gold-text" style="font-size: 1.5rem;"></i>
+                    <span style="font-size: 1.1rem; font-weight: 500;">Guitarra española y auténtica pasión</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Banner Temprano -->
+    <section class="trust-banner" style="background-color: #050505; padding: 20px 0; text-align: center;">
+        <div class="container"
+            style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <div style="color: #d4af37; font-size: 1.2rem; letter-spacing: 2px;">★★★★★</div>
+            <strong style="color: #fff; font-size: 1.1rem;">+150 bodas realizadas con novios y planner felices</strong>
+            <div style="color: #d4af37; font-size: 1.2rem; letter-spacing: 2px;">★★★★★</div>
         </div>
     </section>
 
@@ -131,6 +161,29 @@
         </div>
     </section>
 
+    <!-- Storytelling Emocional -->
+    <section class="storytelling-section"
+        style="background-color: #050505; border-top: 1px solid #222; padding: 100px 0;">
+        <div class="container text-center">
+            <h2 class="section-title" style="color: #fff; font-size: 2.8rem; margin-bottom: 40px;">El momento que todos
+                <span class="gold-text">recordarán</span>
+            </h2>
+
+            <div style="max-width: 600px; margin: 0 auto; font-size: 1.3rem; line-height: 1.8; color: #ccc;">
+                <p style="margin-bottom: 20px;">Cuando comienza a sonar la guitarra,<br>el silencio invade el salón...
+                </p>
+                <p style="margin-bottom: 20px;">y de pronto…</p>
+                <p style="margin-bottom: 40px; font-size: 1.5rem; color: #fff; font-weight: 500;">el flamenco estalla.
+                </p>
+                <p style="font-size: 1.1rem; color: var(--primary-color);">Tus invitados no lo olvidarán jamás.</p>
+            </div>
+
+            <div style="margin-top: 50px;">
+                <a href="#contacto" class="btn btn-outline">Ver disponibilidad de fechas</a>
+            </div>
+        </div>
+    </section>
+
     <section id="galeria" class="section-padding" style="background-color: #0c0c0c; padding: 80px 0;">
         <div class="container">
             <h2 class="section-title text-center" style="color: #fff;">El Arte, La Emoción y <span class="gold-text">La
@@ -169,11 +222,18 @@
                         style="background: url('img/aire-gitano-promo-salon.jpg') center/cover; height: 180px;">
                     </div>
                     <div class="card-content">
-                        <h3>Show Flamenco Elegante</h3>
-                        <p style="color: #d4af37; margin-bottom: 5px;"><strong>Bailaora + Guitarrista</strong></p>
-                        <p style="margin-bottom: 15px; font-weight: bold;">Duración: 20–25 minutos</p>
-                        <p>La combinación clásica para deleitar a tus invitados con arte, técnica y emoción. Ideal para
-                            cócteles o cenas íntimas de boda.</p>
+                        <h3>Espectáculo Esencia Flamenca</h3>
+                        <p style="color: #d4af37; margin-bottom: 15px; font-size: 0.9rem;">Ideal para sorprender a los
+                            invitados.</p>
+
+                        <ul class="service-list" style="margin-bottom: 20px; text-align: left;">
+                            <li><i class="fas fa-check"></i> 2 bailaores profesionales</li>
+                            <li><i class="fas fa-check"></i> Guitarra en vivo</li>
+                            <li><i class="fas fa-check"></i> Show de 15 minutos</li>
+                        </ul>
+
+                        <a href="#contacto" class="btn btn-primary full-width"
+                            style="padding: 10px 0; font-size: 0.8rem;">Consultar paquete</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -181,26 +241,39 @@
                         style="background: url('img/aire-gitano-promo-fuego.jpg') center/cover; height: 180px;">
                     </div>
                     <div class="card-content">
-                        <h3>Show Flamenco Pasión</h3>
-                        <p style="color: #d4af37; margin-bottom: 5px;"><strong>Bailaora + Guitarrista +
-                                Cantante</strong></p>
-                        <p style="margin-bottom: 15px; font-weight: bold;">Duración: 30 minutos</p>
-                        <p>Incorpora la poderosa voz del cante jondo. Un espectáculo vibrante y completo que eriza la
-                            piel y conecta profundamente con todos los asistentes.</p>
+                        <h3>Espectáculo Pasión Gitana</h3>
+                        <p style="color: #d4af37; margin-bottom: 15px; font-size: 0.9rem;">El momento más emocionante de
+                            la boda.</p>
+
+                        <ul class="service-list" style="margin-bottom: 20px; text-align: left;">
+                            <li><i class="fas fa-check"></i> 3 artistas en escena</li>
+                            <li><i class="fas fa-check"></i> Coreografía especial Cante + Baile</li>
+                            <li><i class="fas fa-check"></i> Interacción con invitados</li>
+                        </ul>
+
+                        <a href="#contacto" class="btn btn-primary full-width"
+                            style="padding: 10px 0; font-size: 0.8rem;">Consultar paquete</a>
                     </div>
                 </div>
-                <div class="service-card"
+                <div class="service-card featured"
                     style="border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);">
+                    <div class="tag">Más Solicitado</div>
                     <div class="card-image"
                         style="background: url('img/aire-gitano-portada.jpg') center/cover; height: 180px;">
                     </div>
                     <div class="card-content">
-                        <h3>Espectáculo Flamenco Premium</h3>
-                        <p style="color: #d4af37; margin-bottom: 5px;"><strong>2 Bailaoras + Guitarrista +
-                                Cantante</strong></p>
-                        <p style="margin-bottom: 15px; font-weight: bold;">Duración: 40–45 minutos</p>
-                        <p>El show más impactante y visual para la fiesta. Figura doble de baile creando una atmósfera
-                            de celebración y lujo absoluto en tu boda.</p>
+                        <h3>Experiencia Aire Gitano</h3>
+                        <p style="color: #d4af37; margin-bottom: 15px; font-size: 0.9rem;">Una experiencia inmersiva
+                            inolvidable.</p>
+
+                        <ul class="service-list" style="margin-bottom: 20px; text-align: left;">
+                            <li><i class="fas fa-check"></i> Espectáculo completo</li>
+                            <li><i class="fas fa-check"></i> Músicos en vivo (Cante + Guitarra)</li>
+                            <li><i class="fas fa-check"></i> Momento especial para los novios</li>
+                        </ul>
+
+                        <a href="#contacto" class="btn btn-primary full-width"
+                            style="padding: 10px 0; font-size: 0.8rem;">Consultar paquete</a>
                     </div>
                 </div>
             </div>
@@ -233,7 +306,8 @@
                 </div>
             </div>
             <div class="text-center" style="margin-top: 50px;">
-                <a href="#contacto" class="btn btn-primary">Reservar Fecha</a>
+                <a href="https://wa.me/573007796971?text=Hola,%20quiero%20verificar%20si%20tienen%20disponibilidad%20para%20mi%20boda"
+                    target="_blank" class="btn btn-primary">Reservar Fecha</a>
             </div>
         </div>
     </section>
@@ -282,6 +356,62 @@
         </div>
     </section>
 
+    <!-- Cómo Reservar (Reducción de fricción) -->
+    <section class="how-it-works section-padding" style="background-color: #0c0c0c;">
+        <div class="container">
+            <h2 class="section-title text-center" style="color: #fff;">Cómo <span class="gold-text">reservar</span></h2>
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-top: 50px;">
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
+                        1</div>
+                    <h4 style="color: #fff; margin-bottom: 10px;">Escríbenos</h4>
+                    <p style="color: #aaa; font-size: 0.9rem;">Contáctanos por WhatsApp para contarnos la idea de tu
+                        boda.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
+                        2</div>
+                    <h4 style="color: #fff; margin-bottom: 10px;">Revisamos</h4>
+                    <p style="color: #aaa; font-size: 0.9rem;">Te enviamos disponibilidad de fechas y opciones de show.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
+                        3</div>
+                    <h4 style="color: #fff; margin-bottom: 10px;">Reservas</h4>
+                    <p style="color: #aaa; font-size: 0.9rem;">Bloqueas tu fecha con un anticipo para asegurar a
+                        nuestros artistas.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
+                        4</div>
+                    <h4 style="color: #fff; margin-bottom: 10px;">Disfrutas</h4>
+                    <p style="color: #aaa; font-size: 0.9rem;">Preparamos el espectáculo perfecto mientras tú disfrutas
+                        tu gran día.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="#contacto" class="btn btn-outline"
+                    style="border-color: var(--primary-color); color: var(--primary-color);">Solicitar mi cotización</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgencia y Cierre Emocional -->
+    <section class="urgency-section"
+        style="background-color: var(--primary-color); color: #000; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <h3 style="font-size: 2rem; margin-bottom: 10px; font-weight: 700;">Fechas limitadas</h3>
+            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; font-weight: 500;">Solo aceptamos <strong>un
+                    número reducido de bodas al mes</strong> para garantizar un espectáculo de máxima calidad. Reserva
+                con anticipación.</p>
+        </div>
+    </section>
+
     <!-- Contact / CTA Section -->
     <section id="contacto" class="section contact-section">
         <div class="contact-overlay"></div>
@@ -293,12 +423,12 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div class="contact-box glass-effect">
                 <div class="contact-content">
-                    <h2 class="section-title">Reserva tu Fecha</h2>
-                    <p>Las fechas de temporada alta vuelan. Contáctanos hoy para asegurar tu día y recibir un
-                        presupuesto personalizado.</p>
-
-
-
+                    <h2 class="section-title">Haz que tu boda tenga un momento mágico</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px; font-style: italic;">
+                        El flamenco no es solo música.<br>
+                        Es emoción. Es fuego. Es pasión.<br>
+                        Y puede convertirse en el recuerdo más poderoso de tu boda.
+                    </p>
                     <form class="contact-form">
                         <div class="form-group">
                             <input type="text" placeholder="Nombre completo" required>
