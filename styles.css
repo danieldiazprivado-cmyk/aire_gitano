@@ -439,17 +439,17 @@ img {
 
 .card-image {
     width: 100%;
-    height: 300px;
-    /* Increased height to show more of the image */
+    /* Remove fixed height to allow images to scale naturally without cropping */
+    height: auto;
     overflow: hidden;
+    background-color: #000;
 }
 
 .card-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    /* Focus on heads/top of image */
+    height: auto;
+    display: block;
+    /* Removed object-fit cover to prevent clipping text */
     transition: transform 0.5s ease;
 }
 
