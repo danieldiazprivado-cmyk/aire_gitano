@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Mobile Navigation Toggle
+
+    // =====================
+    // Mobile Navigation
+    // =====================
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -11,24 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            mobileMenuBtn.classList.remove('is-active');
+            if (mobileMenuBtn) mobileMenuBtn.classList.remove('is-active');
         });
     });
 
-    // Smooth Scroll for Anchor Links (Native smooth scroll is in CSS, this is fallback/enhancement)
+    // =====================
+    // Smooth Scroll
+    // =====================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Offset for fixed header
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -41,61 +43,111 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Reveal Animations on Scroll
-    const revealElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .service-card, .gallery-item');
-
-    const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 150;
-
-        revealElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-
-            if (elementTop < windowHeight - elementVisible) {
-                element.classList.add('active');
-                element.style.opacity = "1";
-                element.style.transform = "translate(0)";
+    // =====================
+    // Navbar Glassmorphism on Scroll
+    // =====================
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
         });
-    };
+    }
 
-    window.addEventListener('scroll', revealOnScroll);
-    // Trigger once on load
-    revealOnScroll();
+    // =====================
+    // Scroll Reveal (IntersectionObserver)
+    // =====================
+    const revealElements = document.querySelectorAll('.service-card, .testimonial-card, .step-icon, .experience-text, .experience-image');
 
-    // Stats Counter Animation (Simple version)
-    const stats = document.querySelectorAll('.stat-number');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        revealObserver.observe(el);
+    });
+
+    // =====================
+    // Counter Animation (Scroll-triggered)
+    // =====================
+    const statElements = document.querySelectorAll('[data-count]');
     let statsAnimated = false;
 
-    const animateStats = () => {
-        const statsSection = document.querySelector('.experience');
-        if (!statsSection) return;
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !statsAnimated) {
+                statsAnimated = true;
+                statElements.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    const prefix = stat.getAttribute('data-prefix') || '';
+                    let count = 0;
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 30);
 
-        const sectionTop = statsSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+                    const updateCount = () => {
+                        count += increment;
+                        if (count < target) {
+                            stat.textContent = prefix + Math.ceil(count);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            stat.textContent = prefix + target;
+                        }
+                    };
+                    updateCount();
+                });
+            }
+        });
+    }, { threshold: 0.3 });
 
-        if (sectionTop < windowHeight - 100 && !statsAnimated) {
-            stats.forEach(stat => {
-                const target = +stat.innerText.replace('+', ''); // Remove + for calculation
-                const isPlus = stat.innerText.includes('+');
-                let count = 0;
-                const increment = target / 50; // Speed
+    // Observe the stats section
+    const statsSection = document.querySelector('[data-count]');
+    if (statsSection && statsSection.parentElement) {
+        counterObserver.observe(statsSection.closest('section') || statsSection);
+    }
 
-                const updateCount = () => {
-                    count += increment;
-                    if (count < target) {
-                        stat.innerText = Math.ceil(count) + (isPlus ? '+' : '');
-                        setTimeout(updateCount, 40);
-                    } else {
-                        stat.innerText = target + (isPlus ? '+' : '');
+    // =====================
+    // FAQ Accordion
+    // =====================
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const heading = item.querySelector('h4');
+        if (heading) {
+            heading.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(other => {
+                    if (other !== item) {
+                        other.classList.remove('active');
                     }
-                };
-                updateCount();
+                });
+                // Toggle current
+                item.classList.toggle('active');
             });
-            statsAnimated = true;
         }
-    };
+    });
 
-    window.addEventListener('scroll', animateStats);
+    // =====================
+    // Hero fade-in elements
+    // =====================
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    fadeElements.forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+    });
 
 });

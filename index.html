@@ -101,28 +101,34 @@
         </div>
     </section>
 
-    <!-- Credibility Stats (movidas arriba) -->
-    <section style="background-color: #050505; padding: 40px 0; text-align: center;">
+    <!-- Credibility Stats -->
+    <section style="background-color: var(--bg-darkest); padding: 50px 0; text-align: center;">
         <div class="container">
             <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px;">
                 <div>
-                    <h3 style="font-size: 2.8rem; color: #d4af37; margin-bottom: 5px;">+20</h3>
-                    <p style="font-size: 1rem; font-weight: 500; color: #ccc;">Años de Trayectoria</p>
+                    <h3 class="stat-number" data-count="20" data-prefix="+">+20</h3>
+                    <p
+                        style="font-size: 0.9rem; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.06em;">
+                        Años de Trayectoria</p>
                 </div>
                 <div>
-                    <h3 style="font-size: 2.8rem; color: #d4af37; margin-bottom: 5px;">+500</h3>
-                    <p style="font-size: 1rem; font-weight: 500; color: #ccc;">Presentaciones Exitosas</p>
+                    <h3 class="stat-number" data-count="500" data-prefix="+">+500</h3>
+                    <p
+                        style="font-size: 0.9rem; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.06em;">
+                        Presentaciones Exitosas</p>
                 </div>
                 <div>
-                    <h3 style="font-size: 2.8rem; color: #d4af37; margin-bottom: 5px;">+150</h3>
-                    <p style="font-size: 1rem; font-weight: 500; color: #ccc;">Bodas Inolvidables</p>
+                    <h3 class="stat-number" data-count="150" data-prefix="+">+150</h3>
+                    <p
+                        style="font-size: 0.9rem; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.06em;">
+                        Bodas Inolvidables</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- El Show — PAS Framework (Problema → Agitación → Solución) -->
-    <section id="el-show" class="section-padding" style="background-color: #0c0c0c; padding: 80px 0;">
+    <section id="el-show" class="section-padding" style="background-color: var(--bg-dark); padding: 80px 0;">
         <div class="container">
             <div class="grid-2">
                 <div class="experience-text">
@@ -183,18 +189,19 @@
                 </div>
                 <div class="experience-image">
                     <img src="img/aire-gitano-portada.jpg" alt="Show de flamenco profesional durante boda en Medellín"
-                        style="width: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                        loading="lazy"
+                        style="width: 100%; object-fit: cover; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
                     <div style="margin-top: 30px; display: flex; gap: 15px;">
                         <a href="#contacto"
                             style="display: block; flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                             <img src="img/aire-gitano-promo-salon.jpg"
-                                alt="Bailaora de flamenco en evento de boda elegante"
+                                alt="Bailaora de flamenco en evento de boda elegante" loading="lazy"
                                 style="width: 100%; display: block;">
                         </a>
                         <a href="#contacto"
                             style="display: block; flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                             <img src="img/aire-gitano-promo-boda.jpg"
-                                alt="Show flamenco en vivo durante celebración de boda"
+                                alt="Show flamenco en vivo durante celebración de boda" loading="lazy"
                                 style="width: 100%; display: block;">
                         </a>
                     </div>
@@ -306,86 +313,78 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section-padding" style="background-color: #f9f9f9; padding: 60px 0;">
+    <section id="faq" class="section-padding section-cream" style="padding: 80px 0;">
         <div class="container">
-            <h2 class="section-title text-center" style="color: #0c0c0c;">Preguntas <span
-                    class="gold-text">Frecuentes</span></h2>
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+            <h2 class="section-title text-center">Preguntas <span class="gold-text">Frecuentes</span></h2>
+            <div class="faq-container" style="max-width: 800px; margin: 40px auto 0;">
                 <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 20px 0;">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: #0c0c0c;">¿Cuánto cuesta el show?</h4>
-                    <p style="color: #555;">El precio varía según el paquete y la fecha. Escríbenos por WhatsApp para
+                    <h4 style="font-size: 1.1rem; color: #2C2C2C;">¿Cuánto cuesta el show?</h4>
+                    <p style="color: #666;">El precio varía según el paquete y la fecha. Escríbenos por WhatsApp para
                         una cotización personalizada sin compromiso.</p>
                 </div>
                 <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 20px 0;">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: #0c0c0c;">¿Cuánto dura el show?</h4>
-                    <p style="color: #555;">Entre 20 y 40 minutos dependiendo del paquete que elijas.</p>
+                    <h4 style="font-size: 1.1rem; color: #2C2C2C;">¿Cuánto dura el show?</h4>
+                    <p style="color: #666;">Entre 20 y 40 minutos dependiendo del paquete que elijas.</p>
                 </div>
                 <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 20px 0;">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: #0c0c0c;">¿El show incluye músicos en
+                    <h4 style="font-size: 1.1rem; color: #2C2C2C;">¿El show incluye músicos en
                         vivo?</h4>
-                    <p style="color: #555;">Sí. Baile flamenco acompañado de guitarra y cante en vivo.</p>
+                    <p style="color: #666;">Sí. Baile flamenco acompañado de guitarra y cante en vivo.</p>
                 </div>
                 <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 20px 0;">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: #0c0c0c;">¿En qué momento de la boda se
+                    <h4 style="font-size: 1.1rem; color: #2C2C2C;">¿En qué momento de la boda se
                         hace el show?</h4>
-                    <p style="color: #555;">Tú eliges: apertura, mitad del evento, o como sorpresa para los invitados.
+                    <p style="color: #666;">Tú eliges: apertura, mitad del evento, o como sorpresa para los invitados.
                         Te asesoramos sobre el mejor momento.</p>
                 </div>
                 <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 20px 0;">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: #0c0c0c;">¿Qué pasa si cambio la fecha de
+                    <h4 style="font-size: 1.1rem; color: #2C2C2C;">¿Qué pasa si cambio la fecha de
                         mi boda?</h4>
-                    <p style="color: #555;">Ofrecemos flexibilidad en cambios de fecha. Consulta nuestras condiciones al
+                    <p style="color: #666;">Ofrecemos flexibilidad en cambios de fecha. Consulta nuestras condiciones al
                         momento de reservar.</p>
                 </div>
                 <div class="faq-item" style="padding: 20px 0;">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: #0c0c0c;">¿En qué ciudades se presentan?
+                    <h4 style="font-size: 1.1rem; color: #2C2C2C;">¿En qué ciudades se presentan?
                     </h4>
-                    <p style="color: #555;">Principalmente Medellín y alrededores. Para otras ciudades, consúltanos.</p>
+                    <p style="color: #666;">Principalmente Medellín y alrededores. Para otras ciudades, consúltanos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cómo Reservar (Reducción de fricción) -->
-    <section class="how-it-works section-padding" style="background-color: #0c0c0c;">
+    <!-- Cómo Reservar -->
+    <section class="how-it-works section-padding" style="background-color: var(--bg-darker);">
         <div class="container">
             <h2 class="section-title text-center" style="color: #fff;">Cómo <span class="gold-text">reservar</span></h2>
             <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-top: 50px;">
                 <div style="flex: 1; min-width: 200px; text-align: center;">
-                    <div
-                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
-                        1</div>
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
                     <h4 style="color: #fff; margin-bottom: 10px;">Escríbenos</h4>
                     <p style="color: #aaa; font-size: 0.9rem;">Contáctanos por WhatsApp para contarnos la idea de tu
                         boda.</p>
                 </div>
                 <div style="flex: 1; min-width: 200px; text-align: center;">
-                    <div
-                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
-                        2</div>
+                    <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
                     <h4 style="color: #fff; margin-bottom: 10px;">Revisamos</h4>
                     <p style="color: #aaa; font-size: 0.9rem;">Te enviamos disponibilidad de fechas y opciones de show.
                     </p>
                 </div>
                 <div style="flex: 1; min-width: 200px; text-align: center;">
-                    <div
-                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
-                        3</div>
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
                     <h4 style="color: #fff; margin-bottom: 10px;">Reservas</h4>
                     <p style="color: #aaa; font-size: 0.9rem;">Bloqueas tu fecha con un anticipo para asegurar a
                         nuestros artistas.</p>
                 </div>
                 <div style="flex: 1; min-width: 200px; text-align: center;">
-                    <div
-                        style="width: 60px; height: 60px; background-color: var(--primary-color); color: #000; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px;">
-                        4</div>
+                    <div class="step-icon"><i class="fas fa-star"></i></div>
                     <h4 style="color: #fff; margin-bottom: 10px;">Disfrutas</h4>
                     <p style="color: #aaa; font-size: 0.9rem;">Preparamos el espectáculo perfecto mientras tú disfrutas
                         tu gran día.</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 50px;">
-                <a href="#contacto" class="btn btn-outline"
+                <a href="https://wa.me/573007796971?text=Hola,%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20mi%20boda"
+                    target="_blank" class="btn btn-outline"
                     style="border-color: var(--primary-color); color: var(--primary-color);">Solicitar mi cotización</a>
             </div>
         </div>
